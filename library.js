@@ -1,14 +1,1 @@
-function unix_decode(timestamp, format) {
-    const date = new Date(timestamp * 1000);
-    const h = date.getHours();
-    const m = date.getMinutes();
-    const s = date.getSeconds();
-    const D = date.getDate();
-    const M = date.getMonth() + 1;
-    const Y = date.getFullYear();
-    if (format) {
-        return eval('`' + format + '`')
-    } else {
-        return `${h}:${m}, ${D}/${M}/${Y}`
-    }
-}
+function unix_decode(s,f){let d=new Date(1e3*s),h=d.getHours(),m=d.getMinutes(),s=d.getSeconds(),D=d.getDate(),M=d.getMonth()+1,Y=d.getFullYear();return f?eval("`"+f+"`"):`${h}:${m}, ${D}/${M}/${Y}`}
