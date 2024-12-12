@@ -12,3 +12,4 @@ function unix_decode(timestamp, format) {
         return `${h}:${m}, ${D}/${M}/${Y}`
     }
 }
+console.log('test')
